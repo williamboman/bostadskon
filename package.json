@@ -1,0 +1,17 @@
+{
+  "name": "bostadskon",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "0.16.1",
+    "handlebars": "4.0.6"
+  }
+}
