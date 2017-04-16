@@ -8,7 +8,7 @@
     "start": "node index"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "axios": "0.16.1",
