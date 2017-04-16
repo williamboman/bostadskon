@@ -24,9 +24,11 @@ const sortListing = (a, b) =>
 async function main() {
     const listings = await axios.get('https://bostad.stockholm.se/Lista/AllaAnnonser').then(res => res.data)
     const filteredListings = listings.filter(filterListing).sort(sortListing)
-    const source = await readFile(path.join(__dirname, 'mail.tpl'))
+    const [source, imgSrc] = await Promise.all([
+        readFile(path.join(__dirname, 'mail.tpl')),
+        readFile(path.join(__dirname, 'svg-logo.base64')),
+    ])
     const template = Handlebars.compile(source.toString())
-    const imgSrc = await readFile(path.join(__dirname, 'svg-logo.base64'))
     console.log(template({
         imgSrc: `data:image/svg+xml;base64,${imgSrc}`,
         listings: filteredListings,
