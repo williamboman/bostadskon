@@ -17,7 +17,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <small>Här kommer alla aktiva annonser för idag ({{listings.length}}/{{totalListingCount}}).</small>
+                        <small>Här kommer alla aktiva annonser för idag ({{listings.length}}/{{totalListingCount}} st.).</small>
                     </td>
                 </tr>
             </tbody>
