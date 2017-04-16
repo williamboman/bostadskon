@@ -12,7 +12,7 @@
             <tbody>
                 <tr>
                     <td>
-                        <img src="{{imgSrc}}" height=50 />
+                        <img src="{{imgSrc}}" height="50" />
                     </td>
                 </tr>
                 <tr>
