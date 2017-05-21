@@ -29,11 +29,14 @@ async function main() {
         readFile(path.join(__dirname, 'svg-logo.base64')),
     ])
     const template = Handlebars.compile(source.toString())
-    console.log(template({
+    process.stdout.write(template({
         imgSrc: `data:image/svg+xml;base64,${imgSrc}`,
         listings: filteredListings,
         totalListingCount: listings.length,
     }))
+    return 0
 }
 
-main().then(x => process.exit(x))
+main()
+    .then(x => process.exit(x))
+    .catch(_ => process.exit(1))
