@@ -14,7 +14,7 @@ const readFile = (file) => new Promise((resolve, reject) => {
 })
 
 const filterListing = (listing) =>
-    (listing.Ungdom === true || listing.Korttid === true)
+    listing.Ungdom === true 
 
 const sortListing = (a, b) =>
     a.Yta > b.Yta ? 1 :
